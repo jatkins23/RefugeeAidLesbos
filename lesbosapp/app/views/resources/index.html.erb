@@ -7,26 +7,34 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 	<!--mobile-->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places,map,marker"></script>
-	<script type="text/javascript" src="bootstrap/dist/js/bootstrap.js"></script>
-	<script type="text/javacsript" src="sort.js"></script>
-	<link href="bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-	<link href="index.css" type="text/css" rel="stylesheet"/>
+	<!-- // <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places,map,marker"></script> -->
+	<!--  <script type="text/javascript" src="bootstrap/dist/js/bootstrap.js"></script> -->
+	<!--  <script type="text/javacsript" src="sort.js"></script> -->
+	<!-- <link href="bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+	<!-- <link href="index.css" type="text/css" rel="stylesheet"/> -->
+	<script src="//maps.google.com/maps/api/js?v=3.18&sensor=false&client=&key=&libraries=geometry&language=&hl=&region="></script>
+	<script src="//google-maps-utility-library-v3.googlecode.com/svn/tags/markerclustererplus/2.0.14/src/markerclusterer_packed.js"></script>
 </head>
 
 <body>
-<div class = "container">
 
-		<div class = "panel-group" id="accordion">
 
-			<div class = "panel panel-default">
-				<div class = "panel-heading">
+
+<div class="container">
+
+		<div class="panel-group" id="accordion">
+
+			<div class="panel panel-default">
+				<div class="panel-heading">
 					<h4 class="panel-title">
-						<a href = "#started" data-toggle="collapse" data-parent ="accordion"><%= image_tag "house.png", class: "displayed" %></a>
+						<a href="#started" id="map_trigger" data-toggle="collapse" data-parent ="accordion"><%= image_tag "house.png", class: "displayed" %></a>
 					</h4>
 				</div>
-				<div id = "started" class = "panel-collapse collapse">
-					<div class = "panel-body">
+				<div id="started" class="panel-collapse collapse">
+					<div style='width: 800px;'>
+					  <div id="map" style='width: 800px; height: 400px;'></div>
+					</div>
+					<div class="panel-body">
 						<% @resources.each do |resource| %>
 						<ul>
 							<% if resource.category == "Shelter" %>
@@ -37,14 +45,14 @@
 					</div>
 				</div>
 			</div>
-			<div class = "panel panel-default">
-				<div class = "panel-heading">
-					<h4 class = "panel-title">
-						<a href = "#materials" data-toggle="collapse" data-parent ="accordion"><%= image_tag "foodwater.png", class: "displayed" %></a>
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">
+						<a href="#materials" data-toggle="collapse" data-parent ="accordion"><%= image_tag "foodwater.png", class: "displayed" %></a>
 					</h4>
 				</div>
-				<div id="materials" class = "panel-collapse collapse">
-					<div class = "panel-body">
+				<div id="materials" class="panel-collapse collapse">
+					<div class="panel-body">
 						<% @resources.each do |resource| %>
 						<ul>
 							<% if resource.category == "food_and_water" %>
@@ -57,14 +65,14 @@
 
 
 			</div>
-			<div class = "panel panel-default">
-				<div class = "panel-heading">
+			<div class="panel panel-default">
+				<div class="panel-heading">
 					<h4 class="panel-title">
-						<a href = "#collect" data-toggle="collapse" data-parent ="accordion"><%= image_tag "med.png", class: "displayed" %></a>
+						<a href="#collect" data-toggle="collapse" data-parent ="accordion"><%= image_tag "med.png", class: "displayed" %></a>
 					</h4>
 				</div>
-				<div id = "collect" class = "panel-collapse collapse">
-					<div class = "panel-body">
+				<div id="collect" class="panel-collapse collapse">
+					<div class="panel-body">
 						<% @resources.each do |resource| %>
 						<ul>
 							<% if resource.category == "medical" %>
@@ -75,15 +83,15 @@
 					</div>
 				</div>
 			</div>
-			<div class = "panel panel-default">
-				<div class = "panel-heading">
+			<div class="panel panel-default">
+				<div class="panel-heading">
 					<h4 class="panel-title">
-						<a href = "#grow" data-toggle="collapse" data-parent ="accordion"><%= image_tag "bus.png", class: "displayed" %></a>
+						<a href="#grow" data-toggle="collapse" data-parent ="accordion"><%= image_tag "bus.png", class: "displayed" %></a>
 					</h4>
 				</div>
-				<div id = "grow" class = "panel-collapse collapse">
+				<div id="grow" class="panel-collapse collapse">
 
-					<div class = "panel-body">
+					<div class="panel-body">
 						<% @resources.each do |resource| %>
 						<ul>
 							<% if resource.category == "medical" %>
