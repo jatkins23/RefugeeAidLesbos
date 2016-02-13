@@ -101,6 +101,45 @@
 		</div>
 	</div>
 
+	<script>
+ 	$(document).ready(function(){
+   	$("#map_trigger").click(function(){
+   	<% @resources.each do |resource| %>
+ 	  	var infocontent = "<p><strong>Location: </strong>" + <%= resource.location %> +"</p> " + "<p><strong>Name: </strong>" + <%= resource.name %> +
+ 	                         "</p> <p><strong>Hours: </strong>" + <%= resource.hours %> + "</p> <p><strong>Phone: </strong>" + <%= resource.phone %> + "</p>";
+ 	    var infowindow = new google.maps.infowindow({
+ 	        content: infocontent
+ 	    });
+
+ 	    handler = Gmaps.build('Google');
+ 	      handler.buildMap({provider: {}, internal: {id: 'map'}}, function(){
+ 	        markers = handler.addMarkers([
+ 	          {
+ 	            "lat": <%= resource.lat %>,
+ 	            "lng": <%= resource.lng %>,
+ 	            "picture": {
+ 	              "url": "http://maps.google.com/mapfiles/ms/icons/blue-dot.png",
+ 	              "width":  32,
+ 	              "height": 32
+ 	            },
+ 	            "content": infocontent
+ 	          }
+ 	        ]);
+ 	        google.maps.event.addListener(markers, 'click', function() {
+ 	            infowindow.close();
+ 	            infowindow.open(map, markers);
+ 	        });
+ 	        google.maps.event.addListener(markers, 'dblclick', function() {
+ 	            infowindow.close();
+ 	        });
+ 	        handler.bounds.extendWith(markers);
+ 	        handler.getMap().setZoom(10);
+ 	        handler.map.centerOn(markers[0]);
+ 	      });
+       <% end %>
+   })
+
+ })
 
 </body>
 
