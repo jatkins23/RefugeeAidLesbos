@@ -5,5 +5,3 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-
-water = Resource.create(name:"Water Fountain", location:"100 Main St.", website:"www.water.com", phone:123456910, hours: "8PM-10PM", price: "100", category: "water")
