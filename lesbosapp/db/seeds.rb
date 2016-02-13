@@ -5,5 +5,10 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+require 'csv'
 
-water = Resource.create(name:"Water Fountain", location:"100 Main St.", website:"www.water.com", phone:123456910, hours: "8PM-10PM", price: "100", category: "water")
+csv_text = File.read(Rails.root.join('lib', 'seeds', 'id_hack.csv'))
+csv = CSV.parse(csv_text, :headers => true)
+csv.each do |row|
+  Resource.create!(row.to_hash)
+end
