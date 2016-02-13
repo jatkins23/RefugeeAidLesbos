@@ -4,7 +4,8 @@
 <head>
 	<meta charset='utf-8'/>
 	<title>Refugees in Lesbos</title>
-	<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
 	<!--mobile-->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<script src="//maps.google.com/maps/api/js?v=3.18&sensor=false&client=&key=&libraries=geometry&language=&hl=&region="></script>
@@ -30,13 +31,35 @@
 					  <div id="map" style='width: 800px; height: 400px;'></div>
 					</div>
 					<div class="panel-body">
-						<% @resources.each do |resource| %>
-						<ul>
-							<% if resource.category == "Shelter" %>
-							<li>	<%= resource.name %> | <%= resource.location  %></li>
-							<% end %>
-						</ul>
-						<% end %>
+						<table class="table table-inverse">
+						  <thead>
+						    <tr>
+						      <th>Name</th>
+						      <th>Location</th>
+						      <th>Lat</th>
+						      <th>Lng</th>
+						      <th>Website</th>
+						      <th>Phone</th>
+						      <th>Proof Required</th>
+						    </tr>
+						  </thead>
+						  <% @resources.each do |resource| %>
+						  <tbody>
+						  	<% if resource.category == "Shelter" %>
+						    <tr>
+						      <td><%= resource.name  %></td>
+						      <td><%= resource.location  %></td>
+						      <td><%= resource.lat  %></td>
+						      <td><%= resource.lng  %></td>
+						      <td><%= resource.website  %></td>
+						      <td><%= resource.phone  %></td>
+						      <td><%= resource.proof_required  %></td>
+						    </tr>
+						    <% end %>
+
+						  </tbody>
+						  <% end %>
+						</table>
 					</div>
 				</div>
 			</div>
@@ -48,13 +71,35 @@
 				</div>
 				<div id="materials" class="panel-collapse collapse">
 					<div class="panel-body">
-						<% @resources.each do |resource| %>
-						<ul>
-							<% if resource.category == "food_and_water" %>
-							<li>	<%= resource.name %> | <%= resource.location  %></li>
-							<% end %>
-						</ul>
-						<% end %>
+						<table class="table table-inverse">
+						  <thead>
+						    <tr>
+						      <th>Name</th>
+						      <th>Location</th>
+						      <th>Lat</th>
+						      <th>Lng</th>
+						      <th>Website</th>
+						      <th>Phone</th>
+						      <th>Proof Required</th>
+						    </tr>
+						  </thead>
+						  <% @resources.each do |resource| %>
+						  <tbody>
+						  	<% if resource.category == "food_and_water" %>
+						    <tr>
+						      <td><%= resource.name  %></td>
+						      <td><%= resource.location  %></td>
+						      <td><%= resource.lat  %></td>
+						      <td><%= resource.lng  %></td>
+						      <td><%= resource.website  %></td>
+						      <td><%= resource.phone  %></td>
+						      <td><%= resource.proof_required  %></td>
+						    </tr>
+						    <% end %>
+
+						  </tbody>
+						  <% end %>
+						</table>
 					</div>
 				</div>
 
@@ -68,13 +113,35 @@
 				</div>
 				<div id="collect" class="panel-collapse collapse">
 					<div class="panel-body">
-						<% @resources.each do |resource| %>
-						<ul>
-							<% if resource.category == "medical" %>
-							<li>	<%= resource.name %> | <%= resource.location  %></li>
-							<% end %>
-						</ul>
-						<% end %>
+						<table class="table table-inverse">
+						  <thead>
+						    <tr>
+						      <th>Name</th>
+						      <th>Location</th>
+						      <th>Lat</th>
+						      <th>Lng</th>
+						      <th>Website</th>
+						      <th>Phone</th>
+						      <th>Proof Required</th>
+						    </tr>
+						  </thead>
+						  <% @resources.each do |resource| %>
+						  <tbody>
+						  	<% if resource.category == "medical" %>
+						    <tr>
+						      <td><%= resource.name  %></td>
+						      <td><%= resource.location  %></td>
+						      <td><%= resource.lat  %></td>
+						      <td><%= resource.lng  %></td>
+						      <td><%= resource.website  %></td>
+						      <td><%= resource.phone  %></td>
+						      <td><%= resource.proof_required  %></td>
+						    </tr>
+						    <% end %>
+
+						  </tbody>
+						  <% end %>
+						</table>
 					</div>
 				</div>
 			</div>
