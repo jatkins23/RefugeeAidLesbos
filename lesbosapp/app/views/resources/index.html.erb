@@ -27,7 +27,13 @@
 				</div>
 				<div id = "started" class = "panel-collapse collapse">
 					<div class = "panel-body">
-						stub
+						<% @resources.each do |resource| %>
+						<ul>
+							<% if resource.category == "Shelter" %>
+							<li>	<%= resource.name %> | <%= resource.location  %></li>
+							<% end %>
+						</ul>
+						<% end %>
 					</div>
 				</div>
 			</div>
@@ -39,7 +45,13 @@
 				</div>
 				<div id="materials" class = "panel-collapse collapse">
 					<div class = "panel-body">
-						stub
+						<% @resources.each do |resource| %>
+						<ul>
+							<% if resource.category == "food_and_water" %>
+							<li>	<%= resource.name %> | <%= resource.location  %></li>
+							<% end %>
+						</ul>
+						<% end %>
 					</div>
 				</div>
 
@@ -53,7 +65,13 @@
 				</div>
 				<div id = "collect" class = "panel-collapse collapse">
 					<div class = "panel-body">
-						stub
+						<% @resources.each do |resource| %>
+						<ul>
+							<% if resource.category == "medical" %>
+							<li>	<%= resource.name %> | <%= resource.location  %></li>
+							<% end %>
+						</ul>
+						<% end %>
 					</div>
 				</div>
 			</div>
@@ -66,9 +84,14 @@
 				<div id = "grow" class = "panel-collapse collapse">
 
 					<div class = "panel-body">
-						stub
+						<% @resources.each do |resource| %>
+						<ul>
+							<% if resource.category == "medical" %>
+							<li>	<%= resource.name %> | <%= resource.location  %></li>
+							<% end %>
+						</ul>
+						<% end %>
 					</div>
-
 				</div>
 			</div>
 
