@@ -13,10 +13,7 @@
 
 <body>
 
-
-
 <div class="container">
-
 		<div class="panel-group" id="accordion">
 
 			<div class="panel panel-default">
@@ -30,13 +27,36 @@
 					  <div id="map" style='width: 800px; height: 400px;'></div>
 					</div>
 					<div class="panel-body">
-						<% @resources.each do |resource| %>
-						<ul>
-							<% if resource.category == "Shelter" %>
-							<li>	<%= resource.name %> | <%= resource.location  %></li>
-							<% end %>
-						</ul>
-						<% end %>
+						<table class="table">
+						  <thead>
+						    <tr>
+						      <th>#</th>
+						      <th>Name</th>
+						      <th>Address</th>
+						      <th>Website</th>
+						      <th>Phone</th>
+						      <th>Hours</th>
+						      <th>Price</th>
+						      <th>Proof Required</th>
+						    </tr>
+						  </thead>
+						  <tbody>
+						  	<% @resources.each_with_index do |resource, index| %>
+						  	<% if resource.category == "Shelter" %>
+						    <tr>
+						      <th scope="row"><%= index+1 %></th>
+						      <td><%= resource.name %></td>
+						      <td><%= resource.location  %></td>
+						      <td><a href="<%= resource.website %>"><%= resource.website  %></a></td>
+						      <td><%= resource.phone  %></td>
+						      <td><%= resource.hours  %></td>
+						      <td><%= resource.price  %></td>
+						      <td><%= resource.proof_required  %></td>
+						    </tr>
+						    <% end %>
+						    <% end %>
+						  </tbody>
+						</table>
 					</div>
 				</div>
 			</div>
@@ -48,13 +68,36 @@
 				</div>
 				<div id="materials" class="panel-collapse collapse">
 					<div class="panel-body">
-						<% @resources.each do |resource| %>
-						<ul>
-							<% if resource.category == "food_and_water" %>
-							<li>	<%= resource.name %> | <%= resource.location  %></li>
-							<% end %>
-						</ul>
-						<% end %>
+						<table class="table">
+						  <thead>
+						    <tr>
+						      <th>#</th>
+						      <th>Name</th>
+						      <th>Address</th>
+						      <th>Website</th>
+						      <th>Phone</th>
+						      <th>Hours</th>
+						      <th>Price</th>
+						      <th>Proof Required</th>
+						    </tr>
+						  </thead>
+						  <tbody>
+						  	<% @resources.each_with_index do |resource, index| %>
+						  	<% if resource.category == "food_and_water" %>
+						    <tr>
+						      <th scope="row"><%= index+1 %></th>
+						      <td><%= resource.name %></td>
+						      <td><%= resource.location  %></td>
+						      <td><a href="<%= resource.website %>"><%= resource.website  %></a></td>
+						      <td><%= resource.phone  %></td>
+						      <td><%= resource.hours  %></td>
+						      <td><%= resource.price  %></td>
+						      <td><%= resource.proof_required  %></td>
+						    </tr>
+						    <% end %>
+						    <% end %>
+						  </tbody>
+						</table>
 					</div>
 				</div>
 
@@ -68,13 +111,36 @@
 				</div>
 				<div id="collect" class="panel-collapse collapse">
 					<div class="panel-body">
-						<% @resources.each do |resource| %>
-						<ul>
-							<% if resource.category == "medical" %>
-							<li>	<%= resource.name %> | <%= resource.location  %></li>
-							<% end %>
-						</ul>
-						<% end %>
+						<table class="table table-inverse">
+						  <thead>
+						    <tr>
+						      <th>#</th>
+						      <th>Name</th>
+						      <th>Address</th>
+						      <th>Website</th>
+						      <th>Phone</th>
+						      <th>Hours</th>
+						      <th>Price</th>
+						      <th>Proof Required</th>
+						    </tr>
+						  </thead>
+						  <tbody>
+						  	<% @resources.each_with_index do |resource, index| %>
+						  	<% if resource.category == "medical" %>
+						    <tr>
+						      <th scope="row"><%= index+1 %></th>
+						      <td><%= resource.name %></td>
+						      <td><%= resource.location  %></td>
+						      <td><a href="<%= resource.website %>"><%= resource.website  %></a></td>
+						      <td><%= resource.phone  %></td>
+						      <td><%= resource.hours  %></td>
+						      <td><%= resource.price  %></td>
+						      <td><%= resource.proof_required  %></td>
+						    </tr>
+						    <% end %>
+						    <% end %>
+						  </tbody>
+						</table>
 					</div>
 				</div>
 			</div>
@@ -87,13 +153,6 @@
 				<div id="grow" class="panel-collapse collapse">
 
 					<div class="panel-body">
-						<% @resources.each do |resource| %>
-						<ul>
-							<% if resource.category == "medical" %>
-							<li>	<%= resource.name %> | <%= resource.location  %></li>
-							<% end %>
-						</ul>
-						<% end %>
 					</div>
 				</div>
 			</div>
