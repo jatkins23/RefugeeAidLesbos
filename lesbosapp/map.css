@@ -1,0 +1,42 @@
+body {
+	background: url();
+}
+
+html, body {
+	height: 100%
+}
+
+.info {
+	padding-top: 20px;
+    margin-left: 15%;
+    margin-right: 15%;
+	text-align:center;
+
+}
+
+#map {
+        height: 100%;
+        margin-left: 5%;
+        margin-right: 5%;
+}
+
+@media screen and (max-width: 768px) {
+        .info {
+                display: none;
+        }
+        #map {
+                float: bottom;
+                height: 50%;
+                z-index: -1;
+        }
+}
+
+#text_box {
+    font-size: 9px;
+    float: left;
+    width: 20%;
+}
+
+#key {
+    width: auto;
+}
