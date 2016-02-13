@@ -4,7 +4,7 @@ class CreateResources < ActiveRecord::Migration
       t.string :name
       t.string :location
       t.string :website
-      t.integer :phone
+      t.string :phone
       t.string :hours
       t.integer :price
       t.string :category

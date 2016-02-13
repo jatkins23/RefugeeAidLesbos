@@ -1,48 +1,58 @@
-name,location,website,phone,email,hours,price,proof_required,category
-Agkalia,Kalloni ,https://www.facebook.com/%CE%9C%CE%9A%CE%9F-%CE%91%CE%B3%CE%BA%CE%B1%CE%BB%CE%B9%CE%AC-1175287122497713/,30 698 360 1223,,,,no,Shelter
-Hope Shelter,"39°22'33.1""N 26°11'26.3""E",,,,,,unclear,Shelter
-Lighthouse Relief,"Epar.Od. Kapis-Mithimnas, Mithimna 811 04",http://www.lighthouserelief.org/,,,24hrs,,unclear,Shelter
-Platanos,Skala,https://www.facebook.com/solidarityplatanos/,,,,,unclear,Shelter
-Hotel Gorgona,Skala,"http://www.gorgonahotel.gr/
-",30 2253055301,info@gorgonahotel.gr,,,unclear,Shelter
-PIKPA: The Village of All Together,"Neapoli, 81100 Mytilini, Lesvos",https://www.facebook.com/pikpalesvos/,,info@lesvossolidarity.org,,,unclear,Shelter
+name,location,lat,lng,website,phone,email,hours,price,proof_required,category
+Agkalia,Kalloni ,,,https://www.facebook.com/%CE%9C%CE%9A%CE%9F-%CE%91%CE%B3%CE%BA%CE%B1%CE%BB%CE%B9%CE%AC-1175287122497713/,306983601223,,,,no,Shelter
+Hope Shelter,,"39°22'33.1""N ","26°11'26.3""E",https://www.facebook.com/thekempsons?fref=ts,,,,,unclear,Shelter
+Lighthouse Relief,"Epar.Od. Kapis-Mithimnas, Mithimna 811 04",39.377632,26.249278,http://www.lighthouserelief.org/,,,24hrs,,unclear,Shelter
+Platanos,Skala,39.374329,26.302926,https://www.facebook.com/solidarityplatanos/,,,,,unclear,Shelter
+Hotel Gorgona,Skala,39.373423,26.303006,"http://www.gorgonahotel.gr/
+",302253055301,info@gorgonahotel.gr,,,unclear,Shelter
+PIKPA: The Village of All Together,"Neapoli, 81100 Mytilini, Lesvos",39.069043,26.591631,https://www.facebook.com/pikpalesvos/,,info@lesvossolidarity.org,,,unclear,Shelter
 Lesvion Hotel,"27A P. Kountourioutou Street, mytilene
-",http://www.lesvion.gr/,30 22510 28177,,,,yes,Shelter
+",39.10642,26.558403,http://www.lesvion.gr/,302251028177,,,,yes,Shelter
 Sappho hotel,"31 Kountouriotou str, Mytilene
-",http://www.sappho-hotel.gr/,30 22510 22888,hotel.sappho@gmail.com,,,Yes,Shelter
-Argo hotel,"1, Plateia Konstantinoupoleos, Πλατεία Κωνσταντινουπόλεως 1, Μυτιλήνη, Mitilini 811 00, Greece",,30 2251 029850,,,,Yes,Shelter
+",39.10642,26.558403,http://www.sappho-hotel.gr/,302251022888,hotel.sappho@gmail.com,,,Yes,Shelter
+Argo hotel,"1, Plateia Konstantinoupoleos, Πλατεία Κωνσταντινουπόλεως 1, Μυτιλήνη, Mitilini 811 00, Greece",39.103423,26.555293,,302251029850,,,,Yes,Shelter
 Porto Lesvos I,"21 Komninaki str, Mytilene
-",,,,,,Yes,Shelter
-Fontana Hotel,"14 Sapphous and Arionos str, Mytilene",http://www.fontanalesvos.gr/en/index.php,30 2251 047920,,12am-11.30pm,,Yes,Shelter
+",39.105035,26.559795,,,,,,Yes,Shelter
+Fontana Hotel,"14 Sapphous and Arionos str, Mytilene",39.106328,26.555041,http://www.fontanalesvos.gr/en/index.php,302251047920,,12am-11.30pm,,Yes,Shelter
 Orfeas Hotel,"Katsakouli Str. 3, Mytilene
-",http://www.orfeas-hotel.com/,30 2251 028523,,,,yes,shelter
-Lasia,NEAPOLI MITILINIS 81100,,30 2251 061642,sia123@otenet.gr,,,Yes,shelter
+",39.107538,26.560985,http://www.orfeas-hotel.com/,302251028523,,,,yes,shelter
+Lasia,NEAPOLI MITILINIS 81100,39.069043,26.591631,,302251061642,sia123@otenet.gr,,,Yes,shelter
 Vazakas rooms,"Bizaniou 17 (17, Mpizaniou, Mitilini 811 00)
-",,30 2251 026360,,,,Yes,Shelter
-Heliotrope the studio,"Kyparrision 8a, Mytilene",http://www.heliotropestudios.gr/,30 2251045388; 30 6970120196,info@heliotropestudios.gr,,,Yes,Shelter
+",39.108284,26.55906,,302251026360,,,,Yes,Shelter
+Heliotrope the studio,"Kyparrision 8a, Mytilene",39.107407,26.55424,http://www.heliotropestudios.gr/,302251045388;306970120196,info@heliotropestudios.gr,,,Yes,Shelter
 Angelos rooms,"3 Hlioppoulou Str,  Mytilíni
-",,30 2251 028169,,,,Yes,Shelter
+",39.113641,26.55226,,302251028169,,,,Yes,Shelter
 Motel Nikos,"21 Karapanagioti Str., Mytilíni
-",http://www.motel-nikos.gr/,30 2251 042753,,,,yes,shelter
+",39.106738,26.557275,http://www.motel-nikos.gr/,302251042753,,,,yes,shelter
 Porto Lesvos II,"15 Alkaiou Street, Mytilíni
-",http://www.portolesvos.gr/,30 22510 41771,portolesvos@yahoo.gr,,,yes,shelter
-Betty rooms,6 G. Tertseti Street,,,,,,yes,shelter
-Sappho studio,"25 k.Kenteri Str / Mytilini Area Varia, Lesvos",,30 2251 044985,,,,yes,shelter
+",39.105835,26.55415,http://www.portolesvos.gr/,302251041771,portolesvos@yahoo.gr,,,yes,shelter
+Betty rooms,6 G. Tertseti Street,39.10947,26.559698,,,,,,yes,shelter
+Sappho studio,"25 k.Kenteri Str / Mytilini Area Varia, Lesvos",39.079965,26.57852,,302251044985,,,,yes,shelter
 Zoumboulis room,"11 Naumaxias Ellis Street, Mytilini
-",http://www.zoumboulisrooms.gr/,30 698 311 3002,zoumboulistours@yahoo.gr,,,yes,shelter
+",39.106738,26.557275,http://www.zoumboulisrooms.gr/,306983113002,zoumboulistours@yahoo.gr,,,yes,shelter
 Selana Apartments,"6 Satomvriandou str.
-",,,,,,yes,shelter
-,,,,,,,,
-,,,,,,,,
-Boat Refugee Foundation,"Restaurant Eftalou, Eftalou Beach, Lesvos, Greece",,,,,,,medical
-Polichnitos Health Center,,,30 22520 41111,,,,,medical
-Plomari Health Center,,,30 22520 31111,,,,,medical
-Kalloni Health Center,,http://www.vostanio.gr/kentro-ygeias-kallonis,30 2253022222,,,,,medical
-Antissa Health Center,,"Antissa, Epar. Od. Antissa-Sigri",30 2253056444,,,,,medical
-PEDY KALLONIS - KENTRO YGEIAS,,,,,24 hours,,,medical
-Hospital in Mytilene,,,,,,,,medical
-Platanos,Skala,https://www.facebook.com/solidarityplatanos/,,,,,,food_and_water
-Point 8 Camp,,,,,,,,food_and_water
-Bobiras Cafe,,,,,,,,food_and_water
-Bakery Samiotis,"El. Venizelou 27, Lesvos 811 00",,,,,,,food_and_water
-NoBorderKitchen," at Tsamakia-beach, Mytilini",,,,,,,food_and_water
+",39.109404,26.555003,,,,,,yes,shelter
+,,,,,,,,,,
+,,,,,,,,,,
+Boat Refugee Foundation,"Restaurant Eftalou, Eftalou Beach, Lesvos, Greece",,,,,,,,,medical
+Polichnitos Health Center,Polichnitos,,,,302252041111,,,,,medical
+Plomari Health Center,Plomari,,,,302252031111,,,,,medical
+Kalloni Health Center,Kallonis,39.233118,26.20723,http://www.vostanio.gr/kentro-ygeias-kallonis,302253022222,,,,,medical
+Antissa Health Center,"Antissa, Epar. Od. Antissa-Sigri",39.236175,25.977789,,302253056444,,,,,medical
+PEDY KALLONIS - KENTRO YGEIAS,Kallonis,39.233118,26.20723,,,,24 hours,,,medical
+Hospital in Mytilene,Mytilene,39.0913112,26.549044,,,,,,,medical
+Platanos,Skala,39.374329,26.302926,https://www.facebook.com/solidarityplatanos/,6940615044,teamplatanos@gmail.com,,,,food_and_water
+Point 8 Camp,Korakas,39.389444,26.342778,,,,,,,food_and_water
+Bobiras Cafe,,39.106738,26.557275,,,,,,,food_and_water
+Bakery Samiotis,"El. Venizelou 27, Lesvos 811 00",39.102682,26.55617,,,,,,,food_and_water
+NoBorderKitchen," at Tsamakia-beach, Mytilini",39.108265,26.564275,,,,,,,food_and_water
+CK team,Kleio/Kapı near Mantamados,,,,,,,,,food_and_water
+The volunteer cooks,,,,https://www.facebook.com/thevolunteercook/?fref=ts,,,,,,food_and_water
+Doctors of the World Medical Tent,,39.134358,26.503097,,,,9am-5pm mon-sat,,,medical
+,,,,,,,,,,
+,,,,,,,,,,
+Red Cross/Red Crescent Hotline Number:,,,,, 30 210 514 04 40 ,,"8:00am-8:00pm, Monday to Friday
+",,,Emergency
+ Red Cross/Red Crescent Reuniting Family Links (RFL) (Lesbos),,,,,30 694 3858082,,9:00am-9:00pm,,,
+ PEDY Emergency,,,,,2251057410 ; 2251057416,,,,,
+,,,,,2251351100,,,,,
