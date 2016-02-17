@@ -64,11 +64,12 @@
 			<div class="panel panel-default">
 				<div class="panel-heading">
 					<h4 class="panel-title">
-						<a href="#materials" data-toggle="collapse" data-parent ="accordion"><%= image_tag "foodwater.png", class: "displayed" %></a>
+						<a href="#materials" class="map_trigger" data-toggle="collapse" data-parent ="accordion"><%= image_tag "foodwater.png", class: "displayed" %></a>
 					</h4>
 				</div>
 				<div id="materials" class="panel-collapse collapse">
 					<div class="panel-body">
+						<div id="map" style='height: 400px;'></div>
 						<table class="table table-inverse">
 						  <thead>
 						    <tr>
@@ -106,11 +107,12 @@
 			<div class="panel panel-default">
 				<div class="panel-heading">
 					<h4 class="panel-title">
-						<a href="#collect" data-toggle="collapse" data-parent ="accordion"><%= image_tag "med.png", class: "displayed" %></a>
+						<a href="#collect" class="map_trigger" data-toggle="collapse" data-parent ="accordion"><%= image_tag "med.png", class: "displayed" %></a>
 					</h4>
 				</div>
 				<div id="collect" class="panel-collapse collapse">
 					<div class="panel-body">
+						<div id="map" style='height: 400px;'></div>
 						<table class="table table-inverse">
 						  <thead>
 						    <tr>
@@ -146,19 +148,13 @@
 			<div class="panel panel-default">
 				<div class="panel-heading">
 					<h4 class="panel-title">
-						<a href="#grow" data-toggle="collapse" data-parent ="accordion"><%= image_tag "bus.png", class: "displayed" %></a>
+						<a href="#grow" class="map_trigger" data-toggle="collapse" data-parent ="accordion"><%= image_tag "bus.png", class: "displayed" %></a>
 					</h4>
 				</div>
 				<div id="grow" class="panel-collapse collapse">
 
 					<div class="panel-body">
-						<% @resources.each do |resource| %>
-						<ul>
-							<% if resource.category == "medical" %>
-							<li>	<%= resource.name %> | <%= resource.location  %></li>
-							<% end %>
-						</ul>
-						<% end %>
+						<div id="map" style='height: 400px;'></div>
 					</div>
 				</div>
 			</div>
@@ -170,18 +166,7 @@
 $('.map_trigger').click(function(){
 	handler = Gmaps.build('Google');
 	handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
-	  markers = handler.addMarkers([
-	    {
-	      "lat": 0,
-	      "lng": 0,
-	      "picture": {
-	        "url": "https://addons.cdn.mozilla.net/img/uploads/addon_icons/13/13028-64.png",
-	        "width":  36,
-	        "height": 36
-	      },
-	      "infowindow": "hello!"
-	    }
-	  ]);
+	  markers = handler.addMarkers(<%=raw @hash.to_json %>);
 	  handler.bounds.extendWith(markers);
 	  handler.fitMapToBounds();
 	});
