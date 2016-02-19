@@ -85,17 +85,17 @@
 	})
 	$("#shelter_map_trigger").click(function(){
 		$("#shelter_map").toggle();
-		var resources = <%=raw @hash.to_json %>
+		var resources = <%= raw @resources.select { |resource| resource.category == "Shelter" && (!resource.lat.nil? && !resource.lng.nil?)}.to_json%>;
 		shelterMapShow(resources);
 	});
 	$("#foodwater_map_trigger").click(function(){
 		$("#foodwater_map").toggle();
-		var resources = <%=raw @hash.to_json %>
+	var resources = <%= raw @resources.select { |resource| resource.category == "food_and_water" && (!resource.lat.nil? && !resource.lng.nil?)}.to_json%>;
 		foodwaterMapShow(resources);
 	});
 	$("#medical_map_trigger").click(function(){
 		$("#medical_map").toggle();
-		var resources = <%=raw @hash.to_json %>
+		var resources = <%= raw @resources.select { |resource| resource.category == "medical" && (!resource.lat.nil? && !resource.lng.nil?)}.to_json%>;
 		medicalMapShow(resources);
 	});
 </script>
