@@ -14,7 +14,6 @@
 <body>
 
 
-
 <div class="container">
 
 		<div class="panel-group" id="accordion">
@@ -22,13 +21,14 @@
 			<div class="panel panel-default">
 				<div class="panel-heading">
 					<h4 class="panel-title">
-						<a href="#started" class="map_trigger" data-toggle="collapse" data-parent ="accordion"><%= image_tag "house.png", class: "displayed" %></a>
+						<a href="#started" id="shelter_map_trigger" data-toggle="collapse" data-parent ="accordion"><%= image_tag "house.png", class: "displayed" %></a>
 					</h4>
 				</div>
+				<div id="shelter_map" style='height: 400px;'></div>
 				<div id="started" class="panel-collapse collapse">
 
 					<div class="panel-body">
-						<div id="map" style='height: 400px;'></div>
+
 						<table class="table table-inverse">
 						  <thead>
 						    <tr>
@@ -58,12 +58,12 @@
 			<div class="panel panel-default">
 				<div class="panel-heading">
 					<h4 class="panel-title">
-						<a href="#materials" class="map_trigger" data-toggle="collapse" data-parent ="accordion"><%= image_tag "foodwater.png", class: "displayed" %></a>
+						<a href="#materials" id="foodwater_map_trigger" data-toggle="collapse" data-parent ="accordion"><%= image_tag "foodwater.png", class: "displayed" %></a>
 					</h4>
 				</div>
+				<div id="foodwater_map" style='height: 400px;'></div>
 				<div id="materials" class="panel-collapse collapse">
 					<div class="panel-body">
-						<div id="map" style='height: 400px;'></div>
 						<table class="table table-inverse">
 						  <thead>
 						    <tr>
@@ -95,12 +95,14 @@
 			<div class="panel panel-default">
 				<div class="panel-heading">
 					<h4 class="panel-title">
-						<a href="#collect" class="map_trigger" data-toggle="collapse" data-parent ="accordion"><%= image_tag "med.png", class: "displayed" %></a>
+						<a href="#collect" id="medical_map_trigger" data-toggle="collapse" data-parent ="accordion"><%= image_tag "med.png", class: "displayed" %></a>
 					</h4>
 				</div>
+				<div id="medical_map" style='height: 400px;'></div>
+
 				<div id="collect" class="panel-collapse collapse">
 					<div class="panel-body">
-						<div id="map" style='height: 400px;'></div>
+						<div id="medical_map" style='height: 400px;'></div>
 						<table class="table table-inverse">
 						  <thead>
 						    <tr>
@@ -130,7 +132,7 @@
 			<div class="panel panel-default">
 				<div class="panel-heading">
 					<h4 class="panel-title">
-						<a href="#grow" class="map_trigger" data-toggle="collapse" data-parent ="accordion"><%= image_tag "bus.png", class: "displayed" %></a>
+						<a href="#grow" id="transport_map_trigger" data-toggle="collapse" data-parent ="accordion"><%= image_tag "bus.png", class: "displayed" %></a>
 					</h4>
 				</div>
 				<div id="grow" class="panel-collapse collapse">
@@ -144,15 +146,26 @@
 	</div>
 
 <script type="text/javascript">
-$('.map_trigger').click(function(){
-	handler = Gmaps.build('Google');
-	handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
-	  markers = handler.addMarkers(<%=raw @hash.to_json %>);
-	  handler.bounds.extendWith(markers);
-	  handler.fitMapToBounds();
+	$(document).ready(function(){
+		$("#shelter_map").hide();
+		$("#foodwater_map").hide();
+		$("#medical_map").hide();
+	})
+	$("#shelter_map_trigger").click(function(){
+		$("#shelter_map").toggle();
+		var resources = <%=raw @hash.to_json %>
+		shelterMapShow(resources);
 	});
-})
-
+	$("#foodwater_map_trigger").click(function(){
+		$("#foodwater_map").toggle();
+		var resources = <%=raw @hash.to_json %>
+		foodwaterMapShow(resources);
+	});
+	$("#medical_map_trigger").click(function(){
+		$("#medical_map").toggle();
+		var resources = <%=raw @hash.to_json %>
+		medicalMapShow(resources);
+	});
 </script>
 
 </body>
