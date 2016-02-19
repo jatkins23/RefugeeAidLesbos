@@ -7,6 +7,8 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 # require 'csv'
 
+require 'csv'
+
 csv_text = File.read(Rails.root.join('lib', 'seeds', 'id_hack.csv'))
 csv = CSV.parse(csv_text, :headers => true)
 csv.each do |row|
