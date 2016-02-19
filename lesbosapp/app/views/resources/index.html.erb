@@ -42,7 +42,9 @@
 						  <tbody>
 						  	<% if resource.category == "Shelter" %>
 						    <tr>
-						      <td><a href=<%= resource.website %>><%= resource.name  %></a></td>
+						      <td>
+						      	<%= link_to resource.name, resource.website %>
+						      </td>
 						      <td><%= resource.location  %></td>
 						      <td><a href="/#"><%= resource.phone %></a></td>
 						      <td><%= resource.proof_required  %></td>
