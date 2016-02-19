@@ -15,7 +15,7 @@
       </td>
       <td><%= resource.location  %></td>
       <td><a href="/#"><%= resource.phone %></a></td>
-      <td><%= resource.proof_required  %></td>
+      <td><%= resource.proof_required ? "YES" : "NO" %></td>
     </tr>
   <% end %>
 	</tbody>
