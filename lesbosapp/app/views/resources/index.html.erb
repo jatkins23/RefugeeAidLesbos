@@ -44,7 +44,7 @@
 						    <tr>
 						      <td><a href=<%= resource.website %>><%= resource.name  %></a></td>
 						      <td><%= resource.location  %></td>
-						      <td><%= resource.phone  %></td>
+						      <td><a href="/#"><%= resource.phone %></a></td>
 						      <td><%= resource.proof_required  %></td>
 						    </tr>
 						    <% end %>
@@ -78,9 +78,9 @@
 						  	<% if resource.category == "food_and_water" %>
 						    <tr>
 						      <td><a href=<%= resource.website %>><%= resource.name  %></a></td>
-						      <td><%= resource.location  %></td>
-						      <td><%= resource.phone  %></td>
-						      <td><%= resource.proof_required  %></td>
+						      <td><%= resource.location %></td>
+						      <td><a href="/#"><%= resource.phone %></a></td>
+						      <td><%= resource.proof_required %></td>
 						    </tr>
 						    <% end %>
 
@@ -115,9 +115,9 @@
 						  	<% if resource.category == "medical" %>
 						    <tr>
 						      <td><a href=<%= resource.website %>><%= resource.name  %></a></td>
-						      <td><%= resource.location  %></td>
-						      <td><%= resource.phone  %></td>
-						      <td><%= resource.proof_required  %></td>
+						      <td><%= resource.location %></td>
+						      <td><a href="/#"><%= resource.phone %></a></td>
+						      <td><%= resource.proof_required %></td>
 						    </tr>
 						    <% end %>
 
@@ -140,7 +140,6 @@
 					</div>
 				</div>
 			</div>
-
 		</div>
 	</div>
 
