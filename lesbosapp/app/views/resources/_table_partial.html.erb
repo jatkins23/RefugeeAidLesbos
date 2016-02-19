@@ -1,0 +1,22 @@
+<table class="table table-inverse">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Location</th>
+      <th>Phone</th>
+      <th>Proof Required</th>
+    </tr>
+  </thead>
+  <tbody>
+  <% resources.each do |resource| %>
+    <tr>
+      <td>
+      	<%= link_to resource.name, resource.website %>
+      </td>
+      <td><%= resource.location  %></td>
+      <td><a href="/#"><%= resource.phone %></a></td>
+      <td><%= resource.proof_required  %></td>
+    </tr>
+  <% end %>
+	</tbody>
+</table>

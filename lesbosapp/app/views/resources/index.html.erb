@@ -16,9 +16,7 @@
 
 
 <div class="container">
-
 		<div class="panel-group" id="accordion">
-
 			<div class="panel panel-default">
 				<div class="panel-heading">
 					<h4 class="panel-title">
@@ -26,34 +24,9 @@
 					</h4>
 				</div>
 				<div id="started" class="panel-collapse collapse">
-
 					<div class="panel-body">
 						<div id="map" style='height: 400px;'></div>
-						<table class="table table-inverse">
-						  <thead>
-						    <tr>
-						      <th>Name</th>
-						      <th>Location</th>
-						      <th>Phone</th>
-						      <th>Proof Required</th>
-						    </tr>
-						  </thead>
-						  <% @resources.each do |resource| %>
-						  <tbody>
-						  	<% if resource.category == "Shelter" %>
-						    <tr>
-						      <td>
-						      	<%= link_to resource.name, resource.website %>
-						      </td>
-						      <td><%= resource.location  %></td>
-						      <td><a href="/#"><%= resource.phone %></a></td>
-						      <td><%= resource.proof_required  %></td>
-						    </tr>
-						    <% end %>
-
-						  </tbody>
-						  <% end %>
-						</table>
+						<%= render partial: 'table_partial.html.erb', locals: { resources: @resources.select { |resource| resource.category == "Shelter" } } %>
 					</div>
 				</div>
 			</div>
@@ -66,29 +39,7 @@
 				<div id="materials" class="panel-collapse collapse">
 					<div class="panel-body">
 						<div id="map" style='height: 400px;'></div>
-						<table class="table table-inverse">
-						  <thead>
-						    <tr>
-						      <th>Name</th>
-						      <th>Location</th>
-						      <th>Phone</th>
-						      <th>Proof Required</th>
-						    </tr>
-						  </thead>
-						  <% @resources.each do |resource| %>
-						  <tbody>
-						  	<% if resource.category == "food_and_water" %>
-						    <tr>
-						      <td><a href=<%= resource.website %>><%= resource.name  %></a></td>
-						      <td><%= resource.location %></td>
-						      <td><a href="/#"><%= resource.phone %></a></td>
-						      <td><%= resource.proof_required %></td>
-						    </tr>
-						    <% end %>
-
-						  </tbody>
-						  <% end %>
-						</table>
+						<%= render partial: 'table_partial.html.erb', locals: { resources: @resources.select { |resource| resource.category == "food_and_water" } } %>
 					</div>
 				</div>
 
@@ -103,29 +54,7 @@
 				<div id="collect" class="panel-collapse collapse">
 					<div class="panel-body">
 						<div id="map" style='height: 400px;'></div>
-						<table class="table table-inverse">
-						  <thead>
-						    <tr>
-						      <th>Name</th>
-						      <th>Location</th>
-						      <th>Phone</th>
-						      <th>Proof Required</th>
-						    </tr>
-						  </thead>
-						  <% @resources.each do |resource| %>
-						  <tbody>
-						  	<% if resource.category == "medical" %>
-						    <tr>
-						      <td><a href=<%= resource.website %>><%= resource.name  %></a></td>
-						      <td><%= resource.location %></td>
-						      <td><a href="/#"><%= resource.phone %></a></td>
-						      <td><%= resource.proof_required %></td>
-						    </tr>
-						    <% end %>
-
-						  </tbody>
-						  <% end %>
-						</table>
+						<%= render partial: 'table_partial.html.erb', locals: { resources: @resources.select { |resource| resource.category == "medical" } } %>
 					</div>
 				</div>
 			</div>
