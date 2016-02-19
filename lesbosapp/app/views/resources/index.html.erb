@@ -34,9 +34,6 @@
 						    <tr>
 						      <th>Name</th>
 						      <th>Location</th>
-						      <th>Lat</th>
-						      <th>Lng</th>
-						      <th>Website</th>
 						      <th>Phone</th>
 						      <th>Proof Required</th>
 						    </tr>
@@ -45,11 +42,8 @@
 						  <tbody>
 						  	<% if resource.category == "Shelter" %>
 						    <tr>
-						      <td><%= resource.name  %></td>
+						      <td><a href=<%= resource.website %>><%= resource.name  %></a></td>
 						      <td><%= resource.location  %></td>
-						      <td><%= resource.lat  %></td>
-						      <td><%= resource.lng  %></td>
-						      <td><%= resource.website  %></td>
 						      <td><%= resource.phone  %></td>
 						      <td><%= resource.proof_required  %></td>
 						    </tr>
@@ -75,9 +69,6 @@
 						    <tr>
 						      <th>Name</th>
 						      <th>Location</th>
-						      <th>Lat</th>
-						      <th>Lng</th>
-						      <th>Website</th>
 						      <th>Phone</th>
 						      <th>Proof Required</th>
 						    </tr>
@@ -86,11 +77,8 @@
 						  <tbody>
 						  	<% if resource.category == "food_and_water" %>
 						    <tr>
-						      <td><%= resource.name  %></td>
+						      <td><a href=<%= resource.website %>><%= resource.name  %></a></td>
 						      <td><%= resource.location  %></td>
-						      <td><%= resource.lat  %></td>
-						      <td><%= resource.lng  %></td>
-						      <td><%= resource.website  %></td>
 						      <td><%= resource.phone  %></td>
 						      <td><%= resource.proof_required  %></td>
 						    </tr>
@@ -118,9 +106,6 @@
 						    <tr>
 						      <th>Name</th>
 						      <th>Location</th>
-						      <th>Lat</th>
-						      <th>Lng</th>
-						      <th>Website</th>
 						      <th>Phone</th>
 						      <th>Proof Required</th>
 						    </tr>
@@ -129,11 +114,8 @@
 						  <tbody>
 						  	<% if resource.category == "medical" %>
 						    <tr>
-						      <td><%= resource.name  %></td>
+						      <td><a href=<%= resource.website %>><%= resource.name  %></a></td>
 						      <td><%= resource.location  %></td>
-						      <td><%= resource.lat  %></td>
-						      <td><%= resource.lng  %></td>
-						      <td><%= resource.website  %></td>
 						      <td><%= resource.phone  %></td>
 						      <td><%= resource.proof_required  %></td>
 						    </tr>

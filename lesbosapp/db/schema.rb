@@ -32,15 +32,4 @@ ActiveRecord::Schema.define(version: 20160213164903) do
     t.float    "lng"
   end
 
-  create_table "services", force: :cascade do |t|
-    t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "shelters", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
 end
