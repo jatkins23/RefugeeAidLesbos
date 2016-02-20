@@ -13,7 +13,16 @@
       <td>
       	<%= link_to resource.name, resource.website %>
       </td>
-      <td><%= resource.location  %></td>
+      <td>
+        <% if (!resource.lat.nil? && !resource.lng.nil?) %>
+          <% if resource.location.nil? %>
+            <% resource.location = "Location" %>
+        <% end %>
+          <%= link_to resource.location, "https://www.google.com/maps/preview/@39.377632,26.249278,11z"%>
+        <% else %>
+          <%= resource.location %>
+        <% end %>
+      </td>
       <td><a href="/#"><%= resource.phone %></a></td>
       <td><%= resource.proof_required ? "YES" : "NO" %></td>
     </tr>
